@@ -9,7 +9,7 @@ let lastHole;
 let timeUp = false;
 let score = 0;
 let countdown;
-let timeLimit = 0;
+let timeLimit = 20000;
 
 function pickRandomHole(holes) {
     const randomHole = Math.floor(Math.random() * holes.length);
@@ -57,7 +57,7 @@ startButton.addEventListener("click", startGame);
 
 function whack(e){
     score++;
-    this.style.backgroundImage = 'url("yoda2.png)';
+    this.style.backgroundImage = 'url("yoda2.png")';
     this.style.pointerEvents = 'none';
     setTimeout(() => {
         this.style.backgroundImage = 'url("yoda1.png")';
